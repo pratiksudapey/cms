@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Customer;
+use App\Models\Service;
 // use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -28,7 +29,8 @@ class CustomerController extends Controller
      */
     public function create()
     {
-        return view("customer.create");
+        $service = Service::all();
+        return view("customer.create", compact("service"));
     }
 
     /**

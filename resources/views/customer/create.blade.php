@@ -38,6 +38,14 @@
                         <label for="email">Email</label>
                         <input id="email" class="form-control" type="email" name="email" placeholder="enter your email">
                     </div>
+                    <div class="form-group mt-3">
+                        <label for="service">Service</label>
+                       <select name="service" id="service" class="form-control">
+                           @foreach ($service as $services)
+                           <option value="{{$services->id}}">{{$services->name}}</option>
+                           @endforeach
+                       </select>
+                    </div>
                       <button type="submit" class="btn btn-primary mt-3"> Submit</button>
                   </form>
                 </div>
